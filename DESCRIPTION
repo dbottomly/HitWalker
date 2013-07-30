@@ -1,0 +1,15 @@
+Package: HitWalker
+Version: 0.99.1
+Date: 2012-08-06
+Title: Network-based variant prioriziation using functional assay
+        scores
+Author: Daniel Bottomly
+Maintainer: Daniel Bottomly <bottomly@ohsu.edu>
+Depends: R (>= 2.13.0), igraph, DBI, Matrix, methods, graph, Rgraphviz
+Suggests: RMySQL, RSQLite, biomaRt, cgdsr, reshape2, Streamer,
+        HitWalkerData
+Description: HitWalker provides the framework for prioritizing sample variants detected using an exome capture (or other method) relative to functional assay results based on protein-protein interaction data. In addition to prioritization, it also provides a simple visualization facility.  It uses the R/DBI package and therefore requires a supported datasource as well as appropriate queries. 
+License: GPL-3
+URL: https://github.com/dbottomly/HitWalker
+BugReports:
+Packaged: 2013-07-30 14:30:44 UTC; bottomly

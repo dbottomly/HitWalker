@@ -1,0 +1,33 @@
+import(Rgraphviz)
+importClassesFrom(Matrix, dgCMatrix)
+importMethodsFrom(Matrix, '%*%', '+', '-')
+importClassesFrom(graph, graphNEL)
+importFrom(igraph, graph.laplacian, graph.data.frame, get.all.shortest.paths, E, V, is.igraph,
+is.directed, list.edge.attributes, get.edges, get.adjlist)
+importFrom(graph, nodes, edgeWeights)
+importFrom(DBI, dbConnect, dbDisconnect, dbGetQuery, dbReadTable)
+
+
+exportClasses(rwrParams, variantFilter, annotatedIGraph, graphDispParams, priorDbParams, variantPriorResult, rwrParams)
+export(saveGraph, loadGraph)
+export(makeGraphDispParams, fileName, height, width)
+export(transformGraph, nodeWeightCol)
+export(makeVariantFilter)
+exportPattern("^filter")
+export(makeVariantPriorResult)
+exportPattern("^get")
+
+export(reconcile.sample.name, get.protein.protein.graph, get.sample.variants, filter.variant.annots, get.hit.prots, get.sample.overlays, retrieve.param.query,
+run.prioritization.patient, run.protocol, random.walk, collapse.nodes.genes)
+export(process.node.annot, add.in.missing.nodes, protein.list.to.gene, draw.graph.variantPriorResult, draw.graph, make.target.graph, get.graph.sp, makeRwrParams)
+
+export(patVarID, "patVarID<-",patVarID,"patVarID<-",additionalIDs,"additionalIDs<-",annotQuery,"annotQuery<-",combScoreName,"combScoreName<-",coreID,"coreID<-",
+hitQuery,"hitQuery<-",idTable,"idTable<-",matrixQuery,"matrixQuery<-",patientFilterCol,"patientFilterCol<-",patientFreqCol,"patientFreqCol<-",patientOverlay,"patientOverlay<-",
+possibleIdCols,"possibleIdCols<-",queryLabel,"queryLabel<-",reconciledIdCol,"reconciledIdCol<-",rwrParamsObj,"rwrParamsObj<-",sampleIdCol,"sampleIdCol<-",seedLabel,
+"seedLabel<-",getSummarizationLevel,summaryID,"summaryID<-",summaryMap,"summaryMap<-",variantFilterObj,"variantFilterObj<-",variantQuery,"variantQuery<-",variantTypeCol,
+"variantTypeCol<-",nodeWeightCol,show,transformGraph,"transformGraph<-",verbLevel,"verbLevel<-",queryParams,"queryParams<-",scoreSummaryFunc,"scoreSummaryFunc<-", annotation,
+"annotation<-")
+
+export(fileName,"fileName<-", collapseChar, "collapseChar<-", defaultBorder, "defaultBorder<-", defaultColor, "defaultColor<-", hitColors, "hitColors<-", labelFuncList,
+"labelFuncList<-", labelSep,"labelSep<-", maxPlotHits, "maxPlotHits<-", maxPlotVars, "maxPlotVars<-", nameTextSep, "nameTextSep<-", nodeCombinationFunc, "nodeCombinationFunc<-",
+plotFunc, "plotFunc<-", queryColor, "queryColor<-", shapeFunc, "shapeFunc<-", styleFunc, "styleFunc<-", height, "height<-", show, width, "width<-")
