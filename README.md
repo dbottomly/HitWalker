@@ -5,11 +5,11 @@ Multiple packages are either required or suggested for HitWalker to be installed
 
 From inside R use the following commands:
 
-The Comprehensive R Archive Network  using:
+The Comprehensive R Archive Network  using:  
 install.packages(c("igraph", "RSQLite", "cgdsr", "reshape2"))
 
-Bioconductor using:
-source("http://bioconductor.org/biocLite.R")
+Bioconductor using:  
+source("http://bioconductor.org/biocLite.R")  
 biocLite(c("graph", "Rgraphviz", "Streamer", "biomaRt"))
 
 Note that of these packages Rgraphviz is the most difficult to install due to its dependence on the graphviz external library (though I believe this is 
@@ -31,14 +31,14 @@ Note that HitWalker has currently only been tested on R versions R-2.15.1 R-3.0.
 Once installed, the package can be loaded and the user can familiarize themselves with its use by reading any of the four supplied vignettes.  The vignettes build on
 each other and so the suggested reading order is:
 
-Hitwalker_Create_DB
-Hitwalker_Add_metadata
-Hitwalker_glio
-HitWalker
+Hitwalker_Create_DB  
+Hitwalker_Add_metadata  
+Hitwalker_glio  
+HitWalker  
 
 First load the package:
 
-library(HitWalker)
+library(HitWalker)  
 library(HitWalkerData)
 
 Vignettes can be examined through a command similar to:
