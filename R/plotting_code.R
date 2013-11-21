@@ -904,21 +904,22 @@ get.graph.sp <- function(use.graph, from.nodes, to.nodes=NULL, path.len.restrict
                             if (sum(keep.paths) > 0)
                             {
                                 paths <- paths[keep.paths]
-                            
-                                paths <- lapply(paths, function(y)
+                                
+                                #assuming there are more than one valid shortest path, select the one crudely with the highest confidence
+                                path.dist <- sapply(paths, function(z)
+                                                    {
+                                                        sum(E(use.graph, path=as.numeric(z))$weight)
+                                                    })
+                                
+                                ret.paths <- lapply(paths[which.max(path.dist)], function(y)
                                                    {
+                                                        
                                                         edge.mat <- cbind(y[seq(1, length(y)-1)], y[seq(2, length(y))])
                                                         
                                                         return(edge.mat)
                                                    })
                                 
-                                #assuming there are more than one valid shortest path, select the one crudely with the highest confidence
-                                path.dist <- sapply(paths, function(y)
-                                                    {
-                                                        sum(E(use.graph, P=as.numeric(y))$weight)
-                                                    })
-                                
-                                return(paths[which.max(path.dist)])
+                                return(ret.paths)
                             }
                             else
                             {
