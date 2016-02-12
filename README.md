@@ -1,3 +1,8 @@
+Notice
+=========
+
+HitWalker2 now supersedes this package and is freely available at https://github.com/biodev/HitWalker2.  Setup is simplified for common datatypes though the implementation has switched to python/javascript as opposed to R.  For those interested, a streamlined R version of the prioritization code (no visualizations though) is available as part of the `hwhelper` package bundled with HitWalker2.
+
 Installation
 ==========
 
@@ -64,9 +69,7 @@ See the R documentation at http://cran.r-project.org/ for general use of the R p
 Deployment
 ===========
 
-HitWalker requires a database backend and therefore a fair amount of work is required before use of the R package.  I will post
-code and examples of importing VCF files into a MySQL database and configuring HitWalker to work with it.  In the meantime
-email me with any questions.
+HitWalker requires a database backend and therefore a fair amount of work is required before use of the R package.  
 
 Contributors
 ============
